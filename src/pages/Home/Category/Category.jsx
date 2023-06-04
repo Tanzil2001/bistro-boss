@@ -10,6 +10,7 @@ import slide3 from '../../../assets/home/slide3.jpg';
 import slide4 from '../../../assets/home/slide4.jpg';
 import slide5 from '../../../assets/home/slide5.jpg';
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import Description from "../Description/Description";
 
 const Category = () => {
     return (
@@ -21,12 +22,12 @@ const Category = () => {
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
-                centeredSlides={true}
+                centeredSlides={false}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper mb-24"
+                className="mySwiper mb-24 "
             >
                 <SwiperSlide>
                     <img src={slide1} alt="" />
@@ -49,6 +50,9 @@ const Category = () => {
                     <h3 className="text-4xl uppercase text-center -mt-16 text-white">Salads</h3>
                 </SwiperSlide>
             </Swiper>
+            <section>
+                <Description></Description>
+            </section>
         </section>
     );
 };
